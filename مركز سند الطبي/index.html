@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز سند الطبي | احجز موعدك وفحوصاتك أونلاين</title>
+    <meta name="description" content="مركز سند الطبي — احجز موعدك مع نخبة من الاستشاريين في جميع التخصصات، أو احجز تحاليلك وأشعتك، واختر من المواعيد المتاحة مباشرة.">
+    <meta name="theme-color" content="#0e7c6b">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e7c6b'/%3E%3Cpath d='M32 16v32M16 32h32' stroke='white' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== Top bar ===== -->
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <div class="topbar-item">
+                <i class="bi bi-clock"></i>
+                <span>السبت – الخميس: 9:00 ص – 10:00 م</span>
+            </div>
+            <div class="topbar-links">
+                <a href="tel:+201001234567"><i class="bi bi-telephone"></i> 0100 123 4567</a>
+                <span class="topbar-sep"></span>
+                <a href="https://wa.me/201001234567" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> واتساب</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Navigation ===== -->
+    <header class="site-nav" id="siteNav">
+        <div class="container nav-inner">
+            <a href="#home" class="logo">
+                <span class="logo-mark" aria-hidden="true"><i class="bi bi-heart-pulse"></i></span>
+                <span class="logo-text">سند<small>المركز الطبي</small></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks" aria-label="القائمة الرئيسية">
+                <a href="#specialties">التخصصات</a>
+                <a href="#doctors">الأطباء</a>
+                <a href="#availability">المواعيد المتاحة</a>
+                <a href="#tests">الفحوصات</a>
+                <a href="#faq">الأسئلة الشائعة</a>
+                <a href="#contact">تواصل معنا</a>
+                <div class="mobile-nav-actions">
+                    <a href="#booking" class="btn btn-primary btn-sm">احجز موعد</a>
+                    <button class="btn btn-ghost btn-sm" data-action="open-bookings">
+                        <i class="bi bi-calendar2-check"></i> مواعيدي
+                    </button>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="bookings-btn" data-action="open-bookings" aria-label="مواعيدي، 0 حجوزات">
+                    <i class="bi bi-calendar2-check" aria-hidden="true"></i>
+                    <span class="bookings-btn-label">مواعيدي</span>
+                    <span class="badge" id="bookingCount">0</span>
+                </button>
+                <a href="#booking" class="btn btn-primary btn-sm nav-cta">احجز موعد</a>
+                <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== Hero ===== -->
+        <section class="hero" id="home">
+            <div class="hero-bg" aria-hidden="true">
+                <span class="blob blob-1"></span>
+                <span class="blob blob-2"></span>
+                <span class="hero-grid"></span>
+            </div>
+
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <span class="hero-badge reveal">
+                        <span class="pill-dot"></span>
+                        رعاية طبية متكاملة في مكان واحد
+                    </span>
+                    <h1 class="reveal delay-1">
+                        صحتك تستحق
+                        <span class="grad-text">رعاية استثنائية</span>
+                        وحجزًا في ثوانٍ
+                    </h1>
+                    <p class="hero-sub reveal delay-2">
+                        احجز موعدك مع نخبة من الاستشاريين في جميع التخصصات، أو اطلب تحاليلك وأشعتك،
+                        واختر الوقت المناسب لك من المواعيد المتاحة مباشرة — دون انتظار أو مكالمات.
+                    </p>
+
+                    <div class="hero-actions reveal delay-3">
+                        <a href="#booking" class="btn btn-primary btn-lg">
+                            <i class="bi bi-calendar2-plus"></i>
+                            احجز موعدك الآن
+                        </a>
+                        <a href="#availability" class="btn btn-outline btn-lg">
+                            المواعيد المتاحة
+                            <i class="bi bi-arrow-left"></i>
+                        </a>
+                    </div>
+
+                    <div class="hero-trust reveal delay-4">
+                        <div class="hero-rating">
+                            <strong>4.9</strong>
+                            <span class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </span>
+                            <span class="muted">من أكثر من 2,400 تقييم</span>
+                        </div>
+                        <ul class="hero-perks">
+                            <li><i class="bi bi-check2-circle"></i> تأكيد فوري</li>
+                            <li><i class="bi bi-check2-circle"></i> بدون انتظار</li>
+                            <li><i class="bi bi-check2-circle"></i> دفع في المركز</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hero-stage reveal delay-2" aria-hidden="true">
+                    <span class="stage-halo"></span>
+
+                    <div class="float-card confirm-card">
+                        <div class="confirm-head">
+                            <span class="confirm-check"><i class="bi bi-check-lg"></i></span>
+                            <div>
+                                <strong>تم تأكيد الموعد</strong>
+                                <span>كود الحجز: SND-4821</span>
+                            </div>
+                        </div>
+                        <div class="mini-doctor">
+                            <span class="avatar" style="--c:#0e7c6b">س ع</span>
+                            <div class="mini-doctor-info">
+                                <strong>د. سارة عبد الرحمن</strong>
+                                <span>استشاري القلب والأوعية</span>
+                            </div>
+                            <span class="mini-rating"><i class="bi bi-star-fill"></i> 4.9</span>
+                        </div>
+                        <div class="mini-grid">
+                            <div><span>التاريخ</span><strong>الخميس، 29 أكتوبر</strong></div>
+                            <div><span>الوقت</span><strong>11:30 ص</strong></div>
+                        </div>
+                        <div class="mini-foot">
+                            <i class="bi bi-geo-alt"></i>
+                            <span>مركز سند الطبي — الدقي، الجيزة</span>
+                        </div>
+                    </div>
+
+                    <div class="float-card slots-card">
+                        <div class="slots-head"><span class="live-dot"></span> مواعيد متاحة اليوم</div>
+                        <div class="mini-slots">
+                            <span>10:00 ص</span>
+                            <span>11:30 ص</span>
+                            <span class="is-active">01:00 م</span>
+                            <span>02:30 م</span>
+                        </div>
+                        <div class="slots-note"><i class="bi bi-lightning-charge-fill"></i> 4 أوقات متاحة الآن</div>
+                    </div>
+
+                    <div class="float-card rate-card">
+                        <div class="mini-avatars">
+                            <span style="--c:#0e7c6b">م</span>
+                            <span style="--c:#b06ab3">أ</span>
+                            <span style="--c:#c98a2b">ن</span>
+                            <span class="more">+2k</span>
+                        </div>
+                        <div class="rate-info">
+                            <strong>4.9 / 5</strong>
+                            <span>تقييم المرضى</span>
+                        </div>
+                    </div>
+
+                    <div class="stage-badge">
+                        <span class="stage-badge-icon"><i class="bi bi-shield-check"></i></span>
+                        <span>خصوصية وأمان<br><strong>بياناتك محفوظة</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick booking -->
+            <div class="container">
+                <form class="quick-bar reveal" id="quickBar">
+                    <div class="quick-intro">
+                        <span class="quick-icon"><i class="bi bi-calendar2-plus"></i></span>
+                        <div>
+                            <strong>احجز في أقل من دقيقة</strong>
+                            <span>اختر التخصص والطبيب</span>
+                        </div>
+                    </div>
+                    <label class="quick-field">
+                        <span>التخصص</span>
+                        <select id="quickSpecialty" aria-label="اختر التخصص"></select>
+                    </label>
+                    <label class="quick-field">
+                        <span>الطبيب</span>
+                        <select id="quickDoctor" aria-label="اختر الطبيب"></select>
+                    </label>
+                    <button type="submit" class="btn btn-primary">
+                        عرض المواعيد
+                        <i class="bi bi-arrow-left"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ===== Specialties ===== -->
+        <section class="section" id="specialties">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">التخصصات</span>
+                    <h2>رعاية متكاملة لكل أفراد الأسرة</h2>
+                    <p>أكثر من 8 تخصصات طبية دقيقة، بإشراف نخبة من الأطباء والاستشاريين وبتقنيات تشخيص حديثة.</p>
+                </div>
+                <div class="specialty-grid" id="specialtyGrid"></div>
+            </div>
+        </section>
+
+        <!-- ===== Doctors ===== -->
+        <section class="section section-tint" id="doctors">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">فريقنا الطبي</span>
+                    <h2>أطباء تثق بهم</h2>
+                    <p>اختر طبيبك بناءً على التخصص والتقييم وأقرب موعد متاح، واحجز مباشرة.</p>
+                </div>
+                <div class="filter-row reveal" id="doctorFilters" role="tablist" aria-label="تصفية الأطباء حسب التخصص"></div>
+                <div class="doctor-grid" id="doctorGrid"></div>
+            </div>
+        </section>
+
+        <!-- ===== Availability ===== -->
+        <section class="section availability" id="availability">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">حجز فوري</span>
+                    <h2>المواعيد المتاحة</h2>
+                    <p>اختر اليوم المناسب لك واضغط على الوقت الذي يناسبك — تُحدَّث الأوقات المتاحة تلقائيًا.</p>
+                </div>
+
+                <div class="availability-shell reveal">
+                    <div class="avail-tabs" id="availabilityTabs" role="tablist" aria-label="أيام المواعيد المتاحة"></div>
+                    <div class="avail-list" id="availabilityBoard"></div>
+                    <div class="avail-foot">
+                        <span><i class="bi bi-info-circle"></i> الأوقات المعروضة متاحة فعليًا وقد تتغير أثناء إتمام الحجز.</span>
+                        <a href="#booking" class="link-arrow">عرض جميع المواعيد <i class="bi bi-arrow-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Booking wizard ===== -->
+        <section class="section section-tint" id="booking">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">حجز إلكتروني</span>
+                    <h2>احجز موعدك في 3 خطوات</h2>
+                    <p>اختر الخدمة، حدد الموعد المناسب من الأوقات المتاحة، وسنتولى الباقي.</p>
+                </div>
+
+                <div class="booking-shell reveal">
+                    <div class="booking-main">
+                        <ol class="steps" id="steps">
+                            <li data-step="1" class="active"><span class="num">1</span><span class="label">الخدمة</span></li>
+                            <li data-step="2"><span class="num">2</span><span class="label">الموعد</span></li>
+                            <li data-step="3"><span class="num">3</span><span class="label">بياناتك</span></li>
+                            <li data-step="4"><span class="num">4</span><span class="label">التأكيد</span></li>
+                        </ol>
+
+                        <div class="wizard-body" id="wizardBody"></div>
+                        <div class="wizard-actions" id="wizardActions"></div>
+                    </div>
+
+                    <aside class="booking-aside">
+                        <div class="aside-head">
+                            <h3>ملخص الحجز</h3>
+                            <span class="secure-pill"><i class="bi bi-lock"></i> آمن</span>
+                        </div>
+                        <div id="summary"></div>
+                        <div class="aside-note">
+                            <i class="bi bi-info-circle"></i>
+                            <p>الدفع يتم في المركز. يمكنك تعديل أو إلغاء الحجز من «مواعيدي» في أي وقت.</p>
+                        </div>
+                        <div class="aside-help">
+                            <span>تحتاج مساعدة في الاختيار؟</span>
+                            <a href="tel:+201001234567"><i class="bi bi-telephone"></i> 0100 123 4567</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Tests ===== -->
+        <section class="section" id="tests">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">المعامل والأشعة</span>
+                    <h2>الفحوصات والتحاليل</h2>
+                    <p>تحاليل دقيقة وأشعة حديثة بنتائج معتمدة، مع إمكانية سحب العينات من المنزل.</p>
+                </div>
+                <div class="test-grid" id="testGrid"></div>
+                <div class="home-visit-note reveal">
+                    <span class="home-visit-icon"><i class="bi bi-house-heart"></i></span>
+                    <div>
+                        <strong>خدمة سحب العينات من المنزل</strong>
+                        <p>اطلب زيارة فريق التمريض إلى منزلك مقابل 50 ج.م إضافية، واختر الوقت المناسب لك.</p>
+                    </div>
+                    <a href="#booking" class="btn btn-outline btn-sm" data-action="start-test-mode">احجز زيارة منزلية</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Why us + stats ===== -->
+        <section class="section section-tint" id="why">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">لماذا سند؟</span>
+                    <h2>تجربة طبية مصممة حولك</h2>
+                    <p>كل تفصيلة في المركز مدروسة لتمنحك راحة البال من أول مكالمة حتى المتابعة بعد الزيارة.</p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card reveal">
+                        <span class="feature-icon"><i class="bi bi-award"></i></span>
+                        <h3>نخبة من الاستشاريين</h3>
+                        <p>أطباء بخبرات تتجاوز 12 عامًا في التخصصات الدقيقة، مع لجنة علمية لمراجعة الخطط العلاجية.</p>
+                    </article>
+                    <article class="feature-card reveal delay-1">
+                        <span class="feature-icon"><i class="bi bi-cpu"></i></span>
+                        <h3>تقنيات تشخيص حديثة</h3>
+                        <p>أجهزة أشعة ومعامل آلية معتمدة، ونتائج تحاليل دقيقة تصلك إلكترونيًا في نفس اليوم.</p>
+                    </article>
+                    <article class="feature-card reveal delay-2">
+                        <span class="feature-icon"><i class="bi bi-shield-lock"></i></span>
+                        <h3>خصوصية تامة</h3>
+                        <p>بياناتك الطبية محفوظة بسرية كاملة، ولا يصل إليها إلا الفريق المعالج فقط.</p>
+                    </article>
+                    <article class="feature-card reveal delay-3">
+                        <span class="feature-icon"><i class="bi bi-chat-heart"></i></span>
+                        <h3>متابعة بعد الزيارة</h3>
+                        <p>تواصل مباشر مع العيادة عبر واتساب لمتابعة النتائج والاستفسارات خلال 7 أيام من الزيارة.</p>
+                    </article>
+                </div>
+
+                <div class="stats-band reveal">
+                    <div class="stat">
+                        <strong><span class="counter" data-target="12">0</span>+</strong>
+                        <span>سنة من الخبرة</span>
+                    </div>
+                    <div class="stat">
+                        <strong><span class="counter" data-target="45">0</span>+</strong>
+                        <span>طبيب واستشاري</span>
+                    </div>
+                    <div class="stat">
+                        <strong><span class="counter" data-target="38">0</span>K+</strong>
+                        <span>مريض سعيد</span>
+                    </div>
+                    <div class="stat">
+                        <strong><span class="counter" data-target="4.9" data-decimals="1">0</span></strong>
+                        <span>متوسط التقييم</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Testimonials ===== -->
+        <section class="section" id="testimonials">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">آراء المرضى</span>
+                    <h2>قصص ثقة تتجدد كل يوم</h2>
+                    <p>أكثر من 2,400 تقييم من مرضى شاركونا تجربتهم داخل المركز.</p>
+                </div>
+                <div class="testimonial-grid">
+                    <article class="testimonial-card reveal">
+                        <span class="quote-mark">”</span>
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p>حجزت موعدًا في أقل من دقيقة، ودخلت في نفس الميعاد بالضبط. التنظيم والاهتمام بالتفاصيل غير عاديين، والدكتور شرح كل حاجة بهدوء.</p>
+                        <div class="testimonial-author">
+                            <span class="avatar" style="--c:#0e7c6b">م ع</span>
+                            <div><strong>مريم عبد الله</strong><span>مريضة — عيادة القلب</span></div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card reveal delay-1">
+                        <span class="quote-mark">”</span>
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p>أهم حاجة عندي وقت الموعد. الموقع بيوريني الأوقات المتاحة فعليًا وبحجز على طول، والنتائج وصلتني على واتساب في نفس اليوم.</p>
+                        <div class="testimonial-author">
+                            <span class="avatar" style="--c:#1f7a8c">أ س</span>
+                            <div><strong>أحمد سامي</strong><span>مريض — الباطنة والتحاليل</span></div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card reveal delay-2">
+                        <span class="quote-mark">”</span>
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p>جيت مع بنتي في موعد طارئ وكان التعامل راقي جدًا. المكان نضيف، والفريق بيطمّن الأطفال، والمتابعة بعد الزيارة كانت لمسة جميلة.</p>
+                        <div class="testimonial-author">
+                            <span class="avatar" style="--c:#b06ab3">ن م</span>
+                            <div><strong>نهى محمود</strong><span>والدة مريضة — طب الأطفال</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ ===== -->
+        <section class="section section-tint" id="faq">
+            <div class="container faq-grid">
+                <div class="faq-intro reveal">
+                    <span class="eyebrow">الأسئلة الشائعة</span>
+                    <h2>كل ما تحتاج معرفته قبل زيارتك</h2>
+                    <p>لم تجد إجابتك؟ فريق خدمة المرضى متاح من 9 صباحًا حتى 10 مساءً.</p>
+                    <a href="https://wa.me/201001234567" target="_blank" rel="noopener" class="btn btn-primary">
+                        <i class="bi bi-whatsapp"></i> تواصل معنا
+                    </a>
+                </div>
+
+                <div class="faq-list reveal delay-1">
+                    <details class="faq-item" open>
+                        <summary>هل أحتاج لدفع مقدم عند الحجز؟<i class="bi bi-plus-lg"></i></summary>
+                        <div class="faq-answer"><p>لا، الحجز مجاني بالكامل والدفع يتم في المركز بعد الزيارة. يمكنك الدفع نقدًا أو بالبطاقة أو بالمحفظة الإلكترونية.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>كيف أعدل أو ألغي موعدي؟<i class="bi bi-plus-lg"></i></summary>
+                        <div class="faq-answer"><p>اضغط على «مواعيدي» في أعلى الصفحة، ثم اختر الحجز وألغِه. للتعديل، ألغِ الحجز القديم واحجز موعدًا جديدًا، أو تواصل معنا قبل الزيارة بأربع ساعات على الأقل.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>هل تقدمون سحب العينات من المنزل؟<i class="bi bi-plus-lg"></i></summary>
+                        <div class="faq-answer"><p>نعم، خدمة الزيارة المنزلية متاحة يوميًا من 9 صباحًا حتى 7 مساءً مقابل 50 ج.م إضافية. اختر «فحص وتحليل» أثناء الحجز ثم فعّل خيار الزيارة المنزلية.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>متى تصدر نتائج التحاليل؟<i class="bi bi-plus-lg"></i></summary>
+                        <div class="faq-answer"><p>معظم التحاليل الأساسية تصدر في نفس اليوم خلال 4 إلى 6 ساعات. بعض التحاليل المتخصصة تحتاج 24 إلى 48 ساعة، وتصلك النتائج عبر واتساب أو البريد الإلكتروني.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>هل تقبلون التأمين الطبي؟<i class="bi bi-plus-lg"></i></summary>
+                        <div class="faq-answer"><p>نتعامل مع أكبر شركات التأمين الطبي في مصر. تواصل معنا للتأكد من تغطية شركتك قبل الحجز، وسنساعدك في إجراءات الموافقة.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>ما مواعيد العمل؟<i class="bi bi-plus-lg"></i></summary>
+                        <div class="faq-answer"><p>المركز يعمل من السبت إلى الخميس من 9 صباحًا حتى 10 مساءً. يوم الجمعة مخصص للحالات الطارئة فقط من 10 صباحًا حتى 6 مساءً.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Contact ===== -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">تواصل معنا</span>
+                    <h2>نحن بجانبك دائمًا</h2>
+                    <p>اختر الطريقة الأسهل لك للتواصل، أو تفضل بزيارتنا في المركز.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-cards">
+                        <a href="https://maps.google.com/?q=El+Dokki+Giza" target="_blank" rel="noopener" class="contact-card reveal">
+                            <span class="contact-icon"><i class="bi bi-geo-alt"></i></span>
+                            <div><span>العنوان</span><strong>27 شارع التحرير، الدقي، الجيزة</strong></div>
+                            <i class="bi bi-arrow-left contact-arrow"></i>
+                        </a>
+                        <a href="tel:+201001234567" class="contact-card reveal delay-1">
+                            <span class="contact-icon"><i class="bi bi-telephone"></i></span>
+                            <div><span>الحجز والاستفسار</span><strong>0100 123 4567</strong></div>
+                            <i class="bi bi-arrow-left contact-arrow"></i>
+                        </a>
+                        <a href="https://wa.me/201001234567" target="_blank" rel="noopener" class="contact-card reveal delay-2">
+                            <span class="contact-icon"><i class="bi bi-whatsapp"></i></span>
+                            <div><span>واتساب</span><strong>تحدث مع خدمة المرضى</strong></div>
+                            <i class="bi bi-arrow-left contact-arrow"></i>
+                        </a>
+                        <div class="contact-card hours-card reveal delay-3">
+                            <span class="contact-icon"><i class="bi bi-clock-history"></i></span>
+                            <div>
+                                <span>مواعيد العمل</span>
+                                <strong>السبت – الخميس · 9 ص – 10 م</strong>
+                                <small>الجمعة: طوارئ فقط · 10 ص – 6 م</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-cta reveal delay-2">
+                        <span class="cta-eyebrow"><i class="bi bi-headset"></i> خدمة المرضى</span>
+                        <h3>محتاج مساعدة تختار الطبيب المناسب؟</h3>
+                        <p>فريقنا يساعدك في اختيار التخصص والطبيب المناسب لحالتك، ويشرح لك خطوات الحجز والتحضير للفحوصات.</p>
+                        <div class="cta-actions">
+                            <a href="tel:+201001234567" class="btn btn-light">
+                                <i class="bi bi-telephone"></i> 0100 123 4567
+                            </a>
+                            <a href="https://wa.me/201001234567" target="_blank" rel="noopener" class="btn btn-line-light">
+                                <i class="bi bi-whatsapp"></i> واتساب
+                            </a>
+                        </div>
+                        <div class="cta-map" aria-hidden="true">
+                            <span class="map-pin"><i class="bi bi-geo-alt-fill"></i></span>
+                            <span class="map-ring"></span>
+                            <span class="map-label"><i class="bi bi-crosshair"></i> الدقي — الجيزة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#home" class="logo logo-light">
+                    <span class="logo-mark"><i class="bi bi-heart-pulse"></i></span>
+                    <span class="logo-text">سند<small>المركز الطبي</small></span>
+                </a>
+                <p>مركز طبي متكامل يقدم رعاية دقيقة وإنسانية لكل أفراد الأسرة، مع حجز إلكتروني سهل ومواعيد محددة بدون انتظار.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="فيسبوك"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="إنستجرام"><i class="bi bi-instagram"></i></a>
+                    <a href="https://wa.me/201001234567" target="_blank" rel="noopener" aria-label="واتساب"><i class="bi bi-whatsapp"></i></a>
+                    <a href="tel:+201001234567" aria-label="اتصال"><i class="bi bi-telephone"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#specialties">التخصصات</a></li>
+                    <li><a href="#doctors">الأطباء</a></li>
+                    <li><a href="#availability">المواعيد المتاحة</a></li>
+                    <li><a href="#tests">الفحوصات</a></li>
+                    <li><a href="#faq">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>التخصصات</h4>
+                <ul>
+                    <li><a href="#specialties">القلب والأوعية</a></li>
+                    <li><a href="#specialties">الباطنة العامة</a></li>
+                    <li><a href="#specialties">طب الأطفال</a></li>
+                    <li><a href="#specialties">العظام والمفاصل</a></li>
+                    <li><a href="#specialties">الجلدية والتجميل</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>تواصل معنا</h4>
+                <ul class="footer-contact">
+                    <li><i class="bi bi-geo-alt"></i> 27 شارع التحرير، الدقي، الجيزة</li>
+                    <li><i class="bi bi-telephone"></i> <a href="tel:+201001234567">0100 123 4567</a></li>
+                    <li><i class="bi bi-envelope"></i> <a href="mailto:care@sanad-clinic.com">care@sanad-clinic.com</a></li>
+                    <li><i class="bi bi-clock"></i> السبت – الخميس · 9 ص – 10 م</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>© 2026 مركز سند الطبي. جميع الحقوق محفوظة.</p>
+            <p class="credit">تصميم وتطوير: <a href="../index.html">زياد أيمن</a></p>
+        </div>
+    </footer>
+
+    <!-- ===== Floating mobile bar ===== -->
+    <div class="mobile-bar">
+        <a href="#booking" class="btn btn-primary"><i class="bi bi-calendar2-plus"></i> احجز موعد</a>
+        <button class="btn btn-ghost" data-action="open-bookings"><i class="bi bi-calendar2-check"></i> مواعيدي</button>
+        <a href="https://wa.me/201001234567" target="_blank" rel="noopener" class="mobile-wa" aria-label="واتساب"><i class="bi bi-whatsapp"></i></a>
+    </div>
+
+    <!-- ===== My bookings modal ===== -->
+    <div class="modal" id="bookingsModal" role="dialog" aria-modal="true" aria-labelledby="bookingsTitle">
+        <div class="modal-panel">
+            <div class="modal-head">
+                <div>
+                    <h3 id="bookingsTitle">مواعيدي</h3>
+                    <p>كل حجوزاتك محفوظة على هذا الجهاز</p>
+                </div>
+                <button class="modal-close" data-action="close-bookings" aria-label="إغلاق"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="modal-body" id="bookingsList"></div>
+            <div class="modal-foot">
+                <a href="#booking" class="btn btn-primary btn-sm" data-action="close-bookings">حجز موعد جديد</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
